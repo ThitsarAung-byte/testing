@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alert script</title>
+	<script type="text/javascript">
+		var screctno=Math.floor(Math.random()*10)+1;
+		console.log(screctno);
+		var guess=prompt("Guess the number between 1 and 10");
+		guess=Number(guess);
+		var i=1;
+		while(guess!=screctno){
+			
+		
+			if(guess<screctno){
+				alert("Lower, Try Again");
+				console.log("Lower, Try Again");
+			}
+			else if(guess>10 && guess<0){
+				alert("Invalid, Try Again");
+				console.log("Invalid, Try Again");
+			}
+			 
+			else {
+				alert("Higher,Try Again");
+               console.log("Higher,Try Again");
+			}
+			
+			var guess=prompt("Guess the number between 1 and 10");
+		guess=Number(guess);
+		i++;
+		}
+		alert('Correct in '+ i+' times');
+		console.log('Correct in '+ i +' times');
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

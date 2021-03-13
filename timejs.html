@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Js</title>
+</head>
+<body>
+<p id="myp"></p>
+<script type="text/javascript">
+	function clock(argument){
+		var date=new Date();
+		console.log(date);
+		var h=date.getHours();
+		var i=date.getMinutes();
+		var s=date.getSeconds();
+		var myp=document.getElementById('myp')
+		var zone=h>12?'PM':'AM';
+		myp.innerHTML=`Time is ${h}:${i}:${s}${zone}`;
+		//myp.innerHTML=2*3;
+		//myp.innerHTML=23;
+		// myp.innerHTML= h+':'+i+':'+s;
+	}
+	//setTimeout(clock,3000)// one time
+	//setInterval(clock,1000);// repeatly done
+
+</script>
+
+<button onclick="clock()"> Click Me</button>
+</body>
+</html>

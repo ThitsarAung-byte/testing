@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//string
+		var name="Thitsar\"Aung\"" ;
+		console.log(name);
+		console.log(typeof name);// type
+		console.log(name.length);//properties
+		console.log(name.toUpperCase()); //method
+		// number
+		var age=26;
+		age=10;
+		console.log(age);
+		//condition
+		if (age<18) {
+			console.log('men');
+		}
+		//function
+		function square(num){
+			return num*num;
+		}
+		console.log(square(5));
+		//array
+		var subjects=["Myan","Eng","Math"];
+		console.log(subjects);
+		console.log(subjects.pop());//Math =>pie yin nout sone ka har ko phyat
+		console.log(subjects.push("Math"));//3=> add nout sone ka har 
+		console.log(subjects.unshift("Hello"));//4=> shay sone ka har add
+		subjects[1]="Myanmar";
+		console.log(subjects.splice(1,1));//Myanmar=> nay yar a ti kya nale phyat
+		//Looping
+		//for (var i =0 ; i <subjects.length; i++) {
+			//console.log(subjects[i]);
+		//}
+
+		for(var sub of subjects){
+			console.log(sub);
+		}
+ var course={
+ 	name:"PHP BootCamp",
+ 	time:"9-3",
+ 	fee:5000
+ }
+ console.log(course);
+ console.log(course.fee);
+ //While
+ var i=0;
+ while(i<subjects.length){
+ 	console.log(subjects[i])
+ 	i++;
+ }
+ alert("hi Morning");
+ var result=confirm("Are you Sure?");
+ console.log(result);
+ 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

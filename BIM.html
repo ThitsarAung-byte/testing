@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI</title>
+	<link rel="stylesheet" type="text/css" href="stylejs.css">
+	<script type="text/javascript">
+	let btn = document.getElementById('btn');
+
+btn.addEventListener('click', function(){
+    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('h1').value;
+    let finalbmi = (weight / (height * height) * 10000);
+    console.log(finalbmi);
+    document.getElementById('ans').value = finalbmi;
+})
+		// function calculate(argument){
+		// 	var w=document.getElementById('weight').value;
+		// 	w=Number(w.value);
+		// 	var h1=document.getElementById('h1').value;
+		// 	//h1=Number(h1.value);
+		// 	var h2=document.getElementById('h2').value;
+		// 	//h2=Number(h2.value);
+		// 	var h=((h1*12)+h2);
+		// 	var ans=((703*w)/(h*h));
+		// 	ans=document.getElementById('ans').value;
+		// 	alert(ans);
+			
+			
+		// }
+	</script>
+</head>
+<body >
+	<input type="number" name="userweight" 
+	id="w">
+	<input type="number" name="userheight" id="h">
+	<input type="number" name="userheight2" id="h2">
+	<input type="number" name="userbmi" id="ans" >
+	<button onclick="calculate()">Click</button>
+<p id="text"></p>
+
+<script type="text/javascript">
+	function calculate(argument){
+		var w=Number(document.getElementById('w').value);
+		var h=Number(document.getElementById('h').value);
+		var h2=Number(document.getElementById('h2').value);
+		let he=Number((h*12)+h2);
+		console.log(he);
+		var ans=(w*703)/(he*he);
+		answer=ans.toFixed(1);
+		document.getElementById('ans').value=answer;
+		var text=document.getElementById('text');
+		if (answer<18.5) {
+
+			text.innerHTML="You are under weight";
+		}
+		else if(answer>=18.5 && answer<=24.9){
+			text.innerHTML="You are Normal weight";
+		}
+		else if(answer>=25 && answer<=29.9){
+			text.innerHTML="You are Over weight";
+		}
+		else{
+			text.innerHTML="You are Obesity";
+		}
+	}
+</script>
+</body>
+</html>

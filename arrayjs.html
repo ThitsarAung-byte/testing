@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Js</title>
+	<script type="text/javascript">
+    var name="Thitsar Aung";
+    var age=23;
+    console.log('My name is'+name+'I\' m'+age+ 'year old');
+    console.log(`My name is ${name}, I'm ${age} year old!`);
+    age>18?console.log('men'):console.log('boy');
+    var colors=['red','green','blue'];
+    for(var color of colors){
+    	console.log(color);
+    }
+	</script>
+</head>
+<body>
+	<h1>Student</h1>
+	<table border="1" cellpadding="10" cellspacing="0">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var students=[
+		{name:'Mg Mg',age:15,gender:'male',pass:'true'},
+		{name:'Su Su',age:14,gender:'female',pass:'true'},
+		{name:'Wine',age:13,gender:'female',pass:'false'},
+		{name:'kg kg',age:12,gender:'male',pass:'false'}
+
+		]
+		
+		var html="";
+		var i=1;
+		for(var student of students){
+			html+=`<tr>
+					<td>${i++}</td>
+					<td>${student.name}</td>
+					<td>${student.age}</td>
+					<td>${student.gender}</td>
+					<td>${student.pass}</td>
+					</tr>`
+
+		}
+		var tbody=document.getElementById('tbody');
+		tbody.innerHTML=html;
+
+	</script>
+
+</body>
+</html>

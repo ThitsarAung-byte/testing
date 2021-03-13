@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI CALCULATOR</title>
+	<script type="text/javascript">
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="stylejs.css">
+</head>
+<body class="body4">
+	
+		<center><fieldset>
+			<legend><font color="AQUA" size="11px"><i>BMI CALCULATOR
+			</i></font>
+			</legend>
+			<table class="book">
+			<tr>
+			<td>Weight(lb):</td> <td>:</td>
+			<td align="right">
+	<input type="number" name="userweight" id="w">
+	</td></tr>
+			 <br/><br/>
+			 <br/>
+			<tr>
+				<td>Height(ft)</td>
+				<td>:</td>
+	<td align="right">
+		<input type="number" name="userheight" id="h">
+	<input type="number" name="userheight2" id="h2"></td></tr>
+	<tr>
+				<td>BMI</td>
+				<td>:</td>
+	<td align="right"><input type="number" name="userbmi"
+	 id="ans" ></td>
+</tr>
+	
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>
+	<button onclick="calculate()">Click</button>
+<p id="text"></p></td>
+	
+</tr></table></fieldset></center>
+<script type="text/javascript">
+	function calculate(argument){
+		var w=Number(document.getElementById('w').value);
+		var h=Number(document.getElementById('h').value);
+		var h2=Number(document.getElementById('h2').value);
+		let he=Number((h*12)+h2);
+		console.log(he);
+		var ans=(w*703)/(he*he);
+		answer=ans.toFixed(1);
+		document.getElementById('ans').value=answer;
+		var text=document.getElementById('text');
+		if (answer<18.5) {
+
+			text.innerHTML="You are under weight";
+		}
+		else if(answer>=18.5 && answer<=24.9){
+			text.innerHTML="You are Normal weight";
+		}
+		else if(answer>=25 && answer<=29.9){
+			text.innerHTML="You are Over weight";
+		}
+		else{
+			text.innerHTML="You are Obesity";
+		}
+	}
+</script>
+</body>
+</html>

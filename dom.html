@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document Object Model</title>
+	<script type="text/javascript">
+		// Document.getElementById('h1')
+		// console.log(h1);
+		function changetext(argument){
+			var h1=document.getElementById('myh1');
+			console.log(h1);
+			h1.innerHTML="<i>Hi DOM</i>"
+			var input = document.getElementById('username');
+			console.log(Number(input.value));
+			console.log(typeof Number(input.value));
+			//use Number(String)=>number
+		}
+		function changep(argument){
+			var p=document.getElementsByTagName('p');
+			console.log(p);
+			p[0].innerHTML="Hi P";
+			var img=document.getElementsByTagName('img');
+			img[0].src='form3.jpg';
+			img[0].style.width="300px";
+
+
+		}
+		function showname(name){
+			alert(name);
+		}
+	</script>
+</head> 
+<body>
+<h1 id="myh1">Hello DOM</h1>
+<p>P Tag One.</p>
+<p>P Tag Two.</p>
+<img src="ImageDOM.png" width="300px">
+<input type="number" name="useranme" id="username">
+<button onclick="changetext()">ChangeText</button>
+<button onclick="changep()">ChangeP</button>
+<button onclick="showname('Mg Mg')">Show</button>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

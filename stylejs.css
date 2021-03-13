@@ -1,0 +1,55 @@
+.body4{
+background-image:url(bg.jpg);
+background-attachment:fixed;
+background-repeat:no-repeat;
+height: 100%;
+background-size: cover;
+background-position: center;
+/*position: fixed;*/
+}
+fieldset{
+  text-decoration: inherit;
+  /*background-color: rgb(0,0,0.6,0.5);*/
+  background-color: transparent;
+}
+.book{
+  border: 2px solid pink;
+  border-radius: 23px 23px;
+  height: 100%;
+  background-size: cover;
+background-position: center;
+  width:50%;
+  height: 70%;
+  color:#F933FF;
+  background-color: rgba(255,255,255,0.3);
+}
+.bookradius{
+  
+}
+.book tr,
+.book td {
+ padding: 9px 9px;
+}
+.book button{
+	width: auto;
+	height: 35px;
+	border: 12px;
+ background-color: transparent;
+	border-color: gold;
+	border-radius: 1px 1px;
+	color: skyblue;
+}
+.book input{
+  border-radius: 2px 2px;
+  border:2px solid lime;
+}
+
+p{
+  color:red;
+  text-align: center;
+  text-decoration: italic;
+}
+input[type="number"]{
+  background-color: lime;
+  
+}
